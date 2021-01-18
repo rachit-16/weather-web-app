@@ -13,10 +13,7 @@ const forecast = (latitude, longitude, callback) => {
         else{
             const currWeather = body.current
             callback(undefined,
-                    `${currWeather.weather_descriptions[0]}. It is currently
- ${currWeather.temperature} degrees Celsius out. But, it feels like ${currWeather.feelslike}
- degrees Celsius out. Humidity is ${currWeather.humidity}%. Forecast as on: 
- ${body.location.localtime}.`
+                    `${currWeather.weather_descriptions[0]}. It is currently ${currWeather.temperature} degrees Celsius out. But, it feels like ${currWeather.feelslike} degrees Celsius out. Humidity is ${currWeather.humidity}%. Forecast as on: ${body.location.localtime}.`
                     )
         }
     })
